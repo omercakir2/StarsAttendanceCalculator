@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Bilkent Attendance Auto",
+    "version": "1.0",
+    "icons": {
+        "16": "bilkent_icon.jpeg",
+        "48": "bilkent_icon.jpeg",
+        "128": "bilkent_icon.jpeg"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://stars.bilkent.edu.tr/*"],
+            "js": ["script.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
