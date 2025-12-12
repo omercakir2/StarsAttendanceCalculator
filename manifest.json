@@ -1,17 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Bilkent Attendance Auto",
-    "version": "1.0",
+    "manifest_version":3,
+    "name": "Bilkent Attendance Counter",
+    "version" : "1.0.0",
+
     "icons": {
         "16": "bilkent_icon.jpeg",
         "48": "bilkent_icon.jpeg",
         "128": "bilkent_icon.jpeg"
     },
-    "content_scripts": [
-        {
-            "matches": ["https://stars.bilkent.edu.tr/*"],
-            "js": ["script.js"],
-            "run_at": "document_idle"
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Click to Run Script",
+        "default_icon": {
+            "16":"bilkent_icon.jpeg",
+            "48":"bilkent_icon.jpeg"
         }
+    },
+
+    "permissions": [
+        "activeTab",      
+        "scripting"
     ]
+    
 }
